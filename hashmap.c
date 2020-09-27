@@ -74,7 +74,9 @@ HashMap * createMap(long capacity) {
 
 void eraseMap(HashMap * map,  char * key) {    
     long posicion = hash(key, map->capacity);
-    
+    while(map->buckets[posicion] != NULL){
+      posicion += 1;
+    }
     map->buckets[posicion]->key = NULL;
     printf("%ld",posicion);
     map->size -= 1;
