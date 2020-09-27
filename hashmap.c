@@ -51,7 +51,6 @@ void insertMap(HashMap * map, char * key, void * value) { //insertar datos
   }
   map->buckets[posicion]=createPair(key,value);
   map->size = posicion;
-  map->current = posicion;
 }
 
 void enlarge(HashMap * map) {
@@ -63,7 +62,7 @@ void enlarge(HashMap * map) {
 
 HashMap * createMap(long capacity) {
     HashMap * map = (HashMap *) malloc(sizeof(long));
-    map->buckets = (Pair **) calloc (capacity,sizeof(Pair *));
+    map->buckets = (Pair **) calloc (capacity,sizeof(Pair *) * capacity);
     map->size = 0;
     map->capacity = capacity;
     map->current = -1;
