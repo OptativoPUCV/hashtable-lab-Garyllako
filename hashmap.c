@@ -82,7 +82,6 @@ void eraseMap(HashMap * map,  char * key) {
     }
     if(map->buckets[posicion]->key != NULL){
       map->buckets[posicion]->key = NULL;
-      printf("%ld",posicion);
       map->size -= 1;
     }
 }
