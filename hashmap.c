@@ -65,7 +65,7 @@ HashMap * createMap(long capacity) {
     map->size =(long) malloc(sizeof(long));
     map->capacity = capacity;
     map->current = -1;
-    return map;
+    return NULL;
 }
 
 void eraseMap(HashMap * map,  char * key) {    
