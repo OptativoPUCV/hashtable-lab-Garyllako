@@ -76,6 +76,7 @@ void eraseMap(HashMap * map,  char * key) {
     long posicion = hash(key, map->capacity);
     
     map->buckets[posicion]->key = NULL;
+    printf("%ld",posicion);
     map->size -= 1;
 }
 
