@@ -79,11 +79,12 @@ void eraseMap(HashMap * map,  char * key) {
       if(posicion >= map->capacity){
         posicion = posicion - map->capacity;
       }
+      if(map->buckets[posicion] == NULL){
+        exit(1);
+      }
     }
-    if(map->buckets[posicion]->key != NULL){
-      map->buckets[posicion]->key = NULL;
-      map->size -= 1;
-    }
+    map->buckets[posicion]->key = NULL;
+    map->size -= 1;
 }
 
 void * searchMap(HashMap * map,  char * key) {   

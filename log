@@ -491,3 +491,9 @@ Sun Sep 27 23:46:01 UTC 2020:
  1 file changed, 1 deletion(-)
  tests:  0|0
 1a4670d
+Sun Sep 27 23:48:08 UTC 2020: 
+ hashmap.c | 5 +++--
+ 1 file changed, 3 insertions(+), 2 deletions(-)
+ tests:  10|0
+   [ INFO ] se intenta eliminar dato que no existe (key:holo con hash=2)
+8cf5606
