@@ -81,6 +81,7 @@ void * searchMap(HashMap * map,  char * key) {
     long posicion = 0;
     while(is_equal(map->buckets[posicion],key) != 1){
       posicion += 1;
+      printf("%ld",posicion);
       if(map->buckets[posicion] == NULL){
         map->current = posicion;
         return NULL;
