@@ -250,3 +250,9 @@ Sun Sep 27 21:03:19 UTC 2020:
  tests:  5|4
 total_score: 30/70
 dabd034
+Sun Sep 27 21:14:04 UTC 2020: 
+ hashmap.c | 5 +++--
+ 1 file changed, 3 insertions(+), 2 deletions(-)
+ tests:  5|4
+total_score: 30/70
+17c72cc
