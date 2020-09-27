@@ -497,3 +497,8 @@ Sun Sep 27 23:48:08 UTC 2020:
  tests:  10|0
    [ INFO ] se intenta eliminar dato que no existe (key:holo con hash=2)
 8cf5606
+Sun Sep 27 23:58:28 UTC 2020: 
+ hashmap.c | 5 +----
+ 1 file changed, 1 insertion(+), 4 deletions(-)
+ tests:  0|0
+6fb250a
