@@ -54,7 +54,6 @@ void insertMap(HashMap * map, char * key, void * value) { //insertar datos
   }
   map->buckets[posicion] = createPair(key,value);
   map->size = map->size + 1;
-  printf("%ld",posicion);
 }
 
 void enlarge(HashMap * map) {
