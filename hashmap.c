@@ -78,8 +78,8 @@ void eraseMap(HashMap * map,  char * key) {
 }
 
 void * searchMap(HashMap * map,  char * key) {   
-    long posicion = 0;
-    while((map->buckets[posicion] == NULL) || (key == NULL)){
+    long posicion = hash(key, map->capacity);
+    while((map->buckets[posicion] != NULL) || (key == NULL)){
       posicion += 1;
       printf("%ld",posicion);
     }
