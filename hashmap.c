@@ -84,9 +84,7 @@ void * searchMap(HashMap * map,  char * key) {
       if(posicion >= map->capacity){
         posicion = posicion - map->capacity;
       }
-      if(map->buckets[posicion]->value == NULL){
-        return NULL;
-      }
+      
     }
     map->current = posicion;
     return map->buckets[posicion]->value;
