@@ -86,7 +86,7 @@ void * searchMap(HashMap * map,  char * key) {
       }
     }
     map->current = posicion;
-    return map->buckets[posicion];
+    return map->buckets[posicion]->value;
 }
 
 void * firstMap(HashMap * map) {
