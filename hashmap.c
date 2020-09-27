@@ -47,13 +47,11 @@ int is_equal(void* key1, void* key2){
 void insertMap(HashMap * map, char * key, void * value) { //insertar datos
   long posicion = hash(key, map->capacity);
   while(map->buckets[posicion] != NULL) {
-    if(key==NULL){
-      break;
-    }
     posicion = posicion + 1;
   }
   map->buckets[posicion] = createPair(key,value);
   map->size = map->size + 1;
+  printf("%ld",posicion);
 }
 
 void enlarge(HashMap * map) {
