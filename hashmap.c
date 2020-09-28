@@ -106,7 +106,9 @@ void * firstMap(HashMap * map) {
       if (pos == map->capacity){
         printf("el mapa está vacío");
       }
+      printf("%ld",pos);
     }
+    map->current = pos;
     return map->buckets[pos]->value;
 }
 
