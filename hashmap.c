@@ -73,7 +73,7 @@ HashMap * createMap(long capacity) {
 
 void eraseMap(HashMap * map,  char * key) {    
     long posicion;
-    for(posicion = hash(key, map->capacity); posicion < map->capacity ;posicion++){
+    for(posicion = hash(key, map->capacity); posicion <= map->capacity ;posicion++){
       if(is_equal(map->buckets[posicion]->key,key) == 1){
         map->buckets[posicion]->key = NULL;
         map->size -= 1;
