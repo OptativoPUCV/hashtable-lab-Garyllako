@@ -971,3 +971,9 @@ Mon Sep 28 02:40:57 UTC 2020:
  1 file changed, 1 insertion(+), 1 deletion(-)
  tests:  0|0
 9d50cc4
+Mon Sep 28 03:04:08 UTC 2020: 
+ hashmap.c | 12 +++---------
+ 1 file changed, 3 insertions(+), 9 deletions(-)
+ tests:  13|2
+total_score: 50/70
+1687408
