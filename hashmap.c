@@ -59,7 +59,6 @@ void insertMap(HashMap * map, char * key, void * value) { //insertar datos
 void enlarge(HashMap * map) {
     enlarge_called = 1; //no borrar (testing purposes)
 
-
 }
 
 
@@ -113,7 +112,7 @@ void * firstMap(HashMap * map) {
 void * nextMap(HashMap * map) {
     long posicion;
     for(posicion = (map->current + 1); posicion < map->size ;posicion++){
-      if((map->buckets[posicion] != NULL) && (map->buckets[posicion]->value != NULL)){
+      if(map->buckets[posicion]->value != NULL){
         printf("%ld",posicion);
         map->current = posicion;
         return map->buckets[posicion]->value;
