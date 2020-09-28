@@ -112,9 +112,9 @@ void * firstMap(HashMap * map) {
 
 void * nextMap(HashMap * map) {
     long posicion;
-    for(posicion = (map->current + 1); posicion <= map->size ;posicion++){
-      printf("%ld",posicion);
+    for(posicion = (map->current + 1); posicion < map->size ;posicion++){
       if((map->buckets[posicion] != NULL) && (map->buckets[posicion]->value != NULL)){
+        printf("%ld",posicion);
         map->current = posicion;
         return map->buckets[posicion]->value;
       }
