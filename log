@@ -626,3 +626,8 @@ Mon Sep 28 00:48:51 UTC 2020:
  1 file changed, 7 insertions(+), 5 deletions(-)
  tests:  0|0
 580a0bd
+Mon Sep 28 00:50:08 UTC 2020: 
+ hashmap.c | 18 +++++++-----------
+ 1 file changed, 7 insertions(+), 11 deletions(-)
+ tests:  0|0
+67e21a7
