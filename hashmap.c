@@ -111,10 +111,7 @@ void * firstMap(HashMap * map) {
 
 void * nextMap(HashMap * map) {
     long posicion = map->current + 1;
-    while(posicion < map->size){
-      if(posicion > map->capacity){
-        return NULL;
-      }
+    while(posicion < map->capacity){
       if((map->buckets[posicion] != NULL) && (map->buckets[posicion]->value != NULL)){
         map->current = posicion;
         return map->buckets[posicion]->value;
