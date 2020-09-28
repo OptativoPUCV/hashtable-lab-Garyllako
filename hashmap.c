@@ -101,7 +101,7 @@ void * searchMap(HashMap * map,  char * key) {
 
 void * firstMap(HashMap * map) {
     long pos = 0;
-    while(map->buckets[pos]->value == NULL){
+    while(map->buckets[pos]->key == NULL){
       pos += 1;
       if (pos == map->capacity){
         printf("el mapa está vacío");
