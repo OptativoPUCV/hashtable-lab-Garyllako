@@ -100,16 +100,14 @@ void * searchMap(HashMap * map,  char * key) {
 }
 
 void * firstMap(HashMap * map) {
-    long posicion = 0;
-    printf("%ld",posicion);
-    while(map->buckets[posicion]->key == NULL){
-      posicion += 1;
-      if(posicion > map->capacity){
-        return NULL;
+    long posicion;
+    for(posicion = 0; posicion < map->size ;posicion++){
+      if((map->buckets[posicion] != NULL) && (map->buckets[posicion]->value != NULL)){
+        map->current = posicion;
+        return map->buckets[posicion]->value;
       }
     }
-    map->current = posicion;
-    return map->buckets[posicion]->value;
+    return NULL;
 }
 
 void * nextMap(HashMap * map) {
