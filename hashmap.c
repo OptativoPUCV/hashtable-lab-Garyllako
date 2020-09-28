@@ -101,14 +101,16 @@ void * searchMap(HashMap * map,  char * key) {
 
 void * firstMap(HashMap * map) {
     long pos = 0;
-    while(map->buckets[pos]->key != NULL){
-      pos += 1;
-      if (pos == map->capacity){
-        printf("el mapa está vacío");
-      }
-      printf("%ld",pos);
+    if(map->buckets[pos]->key != NULL){
+      return map->buckets[pos]->value;
     }
-    map->current = pos;
+    else{
+      while(map->buckets[pos]->key == NULL){
+        pos += 1;
+        map->current = pos;
+        printf("%ld",pos);
+      }
+    }
     return map->buckets[pos]->value;
 }
 
