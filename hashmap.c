@@ -103,10 +103,12 @@ void * firstMap(HashMap * map) {
     long posicion = 0;
     while(map->buckets[posicion]->key == NULL){
       posicion += 1;
-      map->current = posicion;
+      if(posicion >= map->capacity){
+        posicion = posicion - map->capacity;
+      }
       printf("%ld",posicion);
     }
-    
+    map->current = posicion;
     return map->buckets[posicion]->value;
 }
 
