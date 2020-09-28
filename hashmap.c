@@ -102,8 +102,11 @@ void * searchMap(HashMap * map,  char * key) {
 void * firstMap(HashMap * map) {
     long posicion = 0;
     printf("%ld",posicion);
-    while(map->buckets[posicion]->value == NULL){
+    while(map->buckets[posicion]->key != NULL){
       posicion += 1;
+      if(posicion > map->capacity){
+        return NULL;
+      }
     }
     map->current = posicion;
     return map->buckets[posicion]->value;
