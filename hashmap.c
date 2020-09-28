@@ -107,7 +107,7 @@ void * firstMap(HashMap * map) {
         printf("el mapa está vacío");
       }
     }
-    return map->buckets[pos];
+    return map->buckets[pos]->value;
 }
 
 void * nextMap(HashMap * map) {
