@@ -553,3 +553,9 @@ Mon Sep 28 00:19:17 UTC 2020:
  1 file changed, 3 insertions(+)
  tests:  0|0
 d2a7951
+Mon Sep 28 00:26:11 UTC 2020: 
+ hashmap.c | 5 +++++
+ 1 file changed, 5 insertions(+)
+ tests:  8|3
+total_score: 40/70
+a1f20f7
