@@ -80,6 +80,7 @@ void eraseMap(HashMap * map,  char * key) {
         map->size -= 1;
       }
     }
+    return (void )1;
 }
 
 void * searchMap(HashMap * map,  char * key) {   
