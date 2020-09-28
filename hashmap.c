@@ -75,7 +75,7 @@ void eraseMap(HashMap * map,  char * key) {
     long posicion = hash(key, map->capacity);
     while((is_equal(map->buckets[posicion]->key,key) != 1) && (posicion < map->capacity)){
       posicion += 1;
-      if(is_equal(map->buckets[posicion]->key,"holo")){
+      if(is_equal(map->buckets[posicion]->key,"holo") == 1){
         break;
       }
     }
