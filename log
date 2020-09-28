@@ -576,3 +576,8 @@ Mon Sep 28 00:28:09 UTC 2020:
  1 file changed, 6 deletions(-)
  tests:  0|0
 6cd5bb1
+Mon Sep 28 00:29:00 UTC 2020: 
+ hashmap.c | 12 ------------
+ 1 file changed, 12 deletions(-)
+ tests:  0|0
+7b4e9ef
