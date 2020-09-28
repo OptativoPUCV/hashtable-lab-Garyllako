@@ -73,14 +73,15 @@ HashMap * createMap(long capacity) {
 }
 
 void eraseMap(HashMap * map,  char * key) {    
-    long posicion;
-    for(posicion = hash(key, map->capacity); posicion < map->size ;posicion++){
-      if(is_equal(map->buckets[posicion]->key,key) == 1){
-        map->buckets[posicion]->key = NULL;
-        map->size -= 1;
-      }
-    }
-    return (void )1;
+    long posicion = hash(key, map->capacity);
+    //while(is_equal(map->buckets[posicion]->key,key) != 1){
+    //  posicion += 1;
+    //  if(posicion >= map->capacity){
+    //    posicion = posicion - map->capacity;
+    //  }
+    //}
+    map->buckets[posicion]->key = NULL;
+    map->size -= 1;
 }
 
 void * searchMap(HashMap * map,  char * key) {   
@@ -101,7 +102,7 @@ void * searchMap(HashMap * map,  char * key) {
 void * firstMap(HashMap * map) {
     long posicion;
     for(posicion = 0; posicion < map->size ;posicion++){
-      if((map->buckets[posicion] != NULL) && (map->buckets[posicion]->key != NULL)){
+      if((map->buckets[posicion] != NULL) && (map->buckets[posicion]->value != NULL)){
         map->current = posicion;
         return map->buckets[posicion]->value;
       }
